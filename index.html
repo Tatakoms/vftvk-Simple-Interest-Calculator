@@ -5,12 +5,16 @@
     </head>
     <body>
         <h1>Simple Interest Calculator</h1>
+<p> 
+    Amount <input type="number"  id="principal">  <br/>
+    Rate <input type="range" id="rate" min="0" max="100"> 
+    Value: <span id="demo"></span><br/>
+    No. of Years <input type="number"  id="years">  <br/>
+    Interest : <span id="result"></span><br>
+</p>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <button onclick="compute()" id = "calc">Compute interest</button>
+            <p> If you deposite <id="principal"> 
+            </p>
     </body>
 </html>
