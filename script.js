@@ -1,19 +1,26 @@
-window.onload = function compute(){
+window.onload = function(){
   var button = document.getElementById("calc");
   button.onclick = calculateInterest;
-
 }
 function calculateInterest(){
-  var principalElement  = document.getElementById("principal");
+  var amountElement  = document.getElementById("amount");
   var rateElement = document.getElementById("rate");
   var timeElement = document.getElementById("time");
   var resultText = document.getElementById("result");
+
   var resultRow = document.getElementById("resultRow");
-  var principal = principalElement.value;
+  var amount = amountElement.value;
   var rate = rateElement.value;
   var time = timeElement.value;
 
-  if (isNaN(parseInt(principal)) || isNaN(parseInt(rate)) || isNaN(parseInt(time))) {
+var slider = document.getElementById("rate");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+ if (isNaN(parseInt(amount)) || isNaN(parseInt(rate)) || isNaN(parseInt(time))) {
     resultRow.style.display = "none";
     var allInputs = document.getElementsByTagName('input');
     for(i = 0; i < allInputs.length; i++){
@@ -23,8 +30,12 @@ function calculateInterest(){
     }
   }
   else{
+    var x = ((parseInt(amount)*parseInt(rate)*parseInt(time))/100)
+    var z = 2022
+    var s = z+(parseInt(time))
     resultRow.style.display = "block";
-    resultText.innerHTML = "The simple interest is " + ((parseInt(principal)*parseInt(rate)*parseInt(time))/100);
+    resultText.innerHTML = "If you deposit " + amount + " at an interest rate of " + rate +"%" +". You will receive an amount of " 
+    + x + " in the year " + s
   }
 
 }
