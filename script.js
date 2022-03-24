@@ -34,8 +34,14 @@ slider.oninput = function() {
     var z = 2022
     var s = z+(parseInt(time))
     resultRow.style.display = "block";
-    resultText.innerHTML = "If you deposit " + amount + " at an interest rate of " + rate +"%" +". You will receive an amount of " 
-    + x + " in the year " + s
+    resultText.innerHTML = "If you deposit " + "<span class='yel'>" + amount +"</span>"+ " at an interest rate of " + "<span class='yel'>" + 
+    rate +"%"+ "</span>" +". You will receive an amount of " 
+    + "<span class='yel'>" + x + "</span>"+ " in the year " + "<span class='yel'>" +s +"</span>"
   }
 
 }
+
+
+
+
+
