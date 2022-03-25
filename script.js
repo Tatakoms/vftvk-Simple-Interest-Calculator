@@ -20,6 +20,7 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
+
  if (isNaN(parseInt(amount)) || isNaN(parseInt(rate)) || isNaN(parseInt(time))) {
     resultRow.style.display = "none";
     var allInputs = document.getElementsByTagName('input');
@@ -33,10 +34,11 @@ slider.oninput = function() {
     var x = ((parseInt(amount)*parseInt(rate)*parseInt(time))/100)
     var z = 2022
     var s = z+(parseInt(time))
+
     resultRow.style.display = "block";
-    resultText.innerHTML = "If you deposit " + "<span class='yel'>" + amount +"</span>"+ " at an interest rate of " + "<span class='yel'>" + 
-    rate +"%"+ "</span>" +". You will receive an amount of " 
-    + "<span class='yel'>" + x + "</span>"+ " in the year " + "<span class='yel'>" +s +"</span>"
+    resultText.innerHTML = "If you deposit " + "<span class='yel'>" + amount +"</span>" +  ",<br> at an interest rate of " + "<span class='yel'>" + 
+    rate +"%"+ "</span>" +". <br>You will receive an amount of " 
+    + "<span class='yel'>" + x + "</span>"+ " <br> in the year " + "<span class='yel'>" +s +"</span>"
   }
 
 }

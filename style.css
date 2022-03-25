@@ -1,6 +1,21 @@
-body {background-color:white;}
+body {background-color:black;}
 h1{color:gray;}
 
 .yel{
 	background-color: yellow;
 }
+
+.container {
+	background-color: white;
+	border-radius: 10px;	
+	position: absolute;
+    padding: 50px;
+	font-size: large;
+	}
+
+.text{
+	padding-left: 40px;
+}
+
+
+

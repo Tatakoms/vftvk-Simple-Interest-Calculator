@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
   <head> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Simple Interest Calculator</title>
+       <title>Simple Interest Calculator</title>
         <link rel="stylesheet" href="style.css">
-         <script type="text/javascript" src = "script.js">
-            </script>
+         <script type="text/javascript" src = "script.js"></script>
     </head>
+    <body>
+      <div class ="container">
           <h1>SIMPLE INTEREST CALCULATOR</h1>
+              <div class="text">
               <label for="Amount">Amount:</label>
-              <input type="text" name="" value="" class = "form-control" id = "amount"><br/>
+              <input type="text" class = "form-control" id = "amount"><br/>
               <label for="Rate">Interest Rate:</label>
-              <input type="range" id="rate" min="0" max="21" step = "0.5"> 
+              <input type="range" id="rate" value = "10.5" min="0" max="21" step = "0.5"> 
                Value: <span id="demo"></span><br/>
               <label for="Time">No. of Years:</label>
-              <input type="text" name="" value="" class = "form-control" id = "time"> <br/>
-            <button type="button" name="button" class = "btn-sm btn-primary btn-lg mb-4 float-right btn-block" id = "calc">Calculate</button>
-      <div class="row mt-2" id = "resultRow" style = "display: none">
-        <div class="col-10 col-sm-6 col-lg-4 mx-auto ml-0 p-0">
-          <h3 id = "result"></h3>
+              <input type="number" class = "form-control" id = "time" min 1 max 20>  <br/>
+            <button type="button" name="button" id = "calc">Compute interest</button>
+      <div class="row" id = "resultRow" style = "display: none">
+        <div class="getanswer">
+          <p id = "result"></p>
         </div>
       </div>
     </div>
-    <p>@ Everyone Can Get Rich </p>
+    <Footer>@ Everyone Can Get Rich </Footer>
+  </div>
   </body>
 </html>
 
