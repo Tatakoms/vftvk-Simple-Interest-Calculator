@@ -13,6 +13,10 @@ function calculateInterest(){
   var rate = rateElement.value;
   var time = timeElement.value;
 
+  if (amount<=0|| amount==""){
+      alert("Enter a positive number");
+    document.getElementById("amount").focus();
+        return;}
 var slider = document.getElementById("rate");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
@@ -42,7 +46,6 @@ slider.oninput = function() {
   }
 
 }
-
 
 
 
