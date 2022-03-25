@@ -19,10 +19,10 @@ function calculateInterest(){
         return;}
 var slider = document.getElementById("rate");
 var output = document.getElementById("demo");
-output.innerHTML = slider.value;
+output.innerHTML = slider.value + "%";
 
 slider.oninput = function() {
-  output.innerHTML = this.value;
+  output.innerHTML = this.value + "%";
 }
 
  if (isNaN(parseInt(amount)) || isNaN(parseInt(rate)) || isNaN(parseInt(time))) {
